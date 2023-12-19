@@ -259,7 +259,8 @@ nav .menus{
 
     .menus_topLeft,
     nav #menu-btn,
-    #menus_bottom_text{
+    #menus_bottom_text,
+    #play-reel{
         display: none !important;
     }
     .menus_top .menus_topRight{
