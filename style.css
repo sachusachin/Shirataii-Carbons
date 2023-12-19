@@ -21,6 +21,20 @@ a,button{
     height: 100vh;
     position: relative;
 }
+#play-reel{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color:var(--bg);
+    z-index: -1;
+    transform: translate(-50%,-50%) scale(0);
+    pointer-events: none;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1788);
+}
 .page-1 video{
     position: absolute;
     top: 0;
@@ -28,7 +42,7 @@ a,button{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 nav{
     width: 100%;
@@ -52,10 +66,6 @@ nav #menu-btn{
     font-size: 1.3rem;
     cursor: pointer;
     color: white;
-}
-nav #menu-btn:hover{
-    border-bottom: 1px solid white;
-    color:var(--bg);
 }
 
 nav #menu-btn-ic{
@@ -185,7 +195,9 @@ nav .menus{
     position: relative;
     margin-top: 30px;
 }
-
+#menus_bottom_links_mobile{
+    display: none;
+}
 .menus_bottom::before{
     content: '';
     position: absolute;
@@ -206,8 +218,29 @@ nav .menus{
 }
 
 
-@media only screen and (min-width: 481px) and (max-width: 1000px){
-   .menus_bottom{
+@media only screen and (min-width: 541px) and (max-width: 1000px){
+    #menus_bottom_links{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 2vh;
+    }
+    #menus_bottom_text{
+        display: none !important;
+    }
+    .menus_top{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+    }
+    .menus_bottom{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+    }
+    #menus_bottom_links_mobile{
         display: none !important;
     }
  }
@@ -221,14 +254,33 @@ nav .menus{
         cursor: pointer;
         color: white;
         display:flex;
+        font-size: 1.9vh;
     }
 
     .menus_topLeft,
-    .menus_bottom,
-    nav #menu-btn{
+    nav #menu-btn,
+    #menus_bottom_text{
         display: none !important;
     }
     .menus_top .menus_topRight{
         width: 100%;
+    }
+    #menus_bottom_links{
+        display: none;
+    }
+    #menus_bottom_links_mobile{
+        display: flex;
+    }
+    .menus_top{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+    }
+    .menus_bottom{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
     }
  }
