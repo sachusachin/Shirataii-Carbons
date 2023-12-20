@@ -1,14 +1,27 @@
+function loader(){
+    document.querySelector('.lds-roller').style.display='inline-block'
+}
+
+
 const mytext = new SplitType("#intro-text")
 function introPlay(){
-    document.querySelector('.lds-facebook').style.display='none'
+    document.querySelector('.lds-roller').style.display='none'
     document.querySelector('#intro-text').style.display='flex'
     document.querySelector('#intro-text').style.opacity='1'
     gsap.to(".char", {y:0, opacity:1 ,stagger:0.05, delay:.5,duration:2});
+}
 
+
+function homeLoad(){
+    const myTitle = new SplitType("#title-text")
+    document.querySelector('#intro-box').style.display='none'
+    gsap.to(".char", {y:0, opacity:1 ,stagger:0.05, delay:.5,duration:2});
+    gsap.fromTo("#menu-btn", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1 });
+    gsap.fromTo("#menu-btn-ic", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1});
+    gsap.fromTo("#logo-img", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, delay: 1 });
+    gsap.fromTo("#myVideo", { opacity: 0 }, { opacity: 1, duration: 1, delay: 2 });
 }
-function loader(){
-    document.querySelector('.lds-facebook').style.display='inline-block'
-}
+
 window.onload = function() {
     loader();
   
@@ -62,30 +75,6 @@ function animateMenus() {
 }
 
 
-const title = 'Shirataii Carbons'
 
-
-
-
-for(i of title){
-    t = document.createElement('span')
-    t.textContent=i
-    t.classList.add('tLetter')
-    document.querySelector('#title-text').appendChild(t)
-}
-
-let letter = document.querySelectorAll('.tLetter')
-var l1 = new TimelineMax({paused:true});
-l1.staggerFromTo(letter, 1, {opacity:0,y:20}, {opacity:1,y:-10}, {opacity:1,y:0}, 0.5, "-=1");
-
-
-function homeLoad(){
-    document.querySelector('#intro-box').style.display='none'
-    gsap.fromTo("#myVideo", { opacity: 0 }, { opacity: 1, duration: 1, delay: 1 });
-    gsap.fromTo("#menu-btn", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
-    gsap.fromTo("#menu-btn-ic", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
-    gsap.fromTo("#logo-img", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
-    l1.play(0);
-}
 
 
