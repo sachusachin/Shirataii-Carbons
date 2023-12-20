@@ -2,11 +2,17 @@
 :root{
     --bg:#ff5f38;
 }
+@font-face{
+    font-family: Reef;
+    src: url('NBInternationalProBoo.woff2'), url('NBInternationalProBoo.woff2') format('woff2');}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
 }
 a,button{
     border: none;
@@ -16,6 +22,28 @@ a,button{
     text-decoration: none;
     font-weight: unset;
 
+}
+#intro-box{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: black;
+    z-index: 9999;
+    color:white;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#intro-text{
+    opacity:0;
+}
+.char{
+    transform: translateY(30px);
+    transition: .5s ease-in-out;
+    opacity: 0;
 }
 .page-1{
     height: 100vh;
@@ -34,6 +62,15 @@ a,button{
     transform: translate(-50%,-50%) scale(0);
     pointer-events: none;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1788);
+}
+#title-text{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #ffffff6b;;
+    font-size: 18vh;
+    width: 100%;
+    text-transform: uppercase;
 }
 .page-1 video{
     position: absolute;
@@ -219,6 +256,15 @@ nav .menus{
 
 
 @media only screen and (min-width: 541px) and (max-width: 1000px){
+    #title-text{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        color: #ffffff6b;;
+        font-size: 10vh;
+        width: 100%;
+        text-transform: uppercase;
+    }
     #menus_bottom_links{
         display: flex;
         flex-direction: column;
@@ -260,7 +306,8 @@ nav .menus{
     .menus_topLeft,
     nav #menu-btn,
     #menus_bottom_text,
-    #play-reel{
+    #play-reel,
+    #title-text{
         display: none !important;
     }
     .menus_top .menus_topRight{
