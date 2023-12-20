@@ -1,12 +1,24 @@
 const mytext = new SplitType("#intro-text")
-async function introPlay(){
+function introPlay(){
+    document.querySelector('.lds-facebook').style.display='none'
+    document.querySelector('#intro-text').style.display='flex'
     document.querySelector('#intro-text').style.opacity='1'
-    await gsap.to(".char", {y:0, opacity:1 ,stagger:0.05, delay:.5,duration:1});
+    gsap.to(".char", {y:0, opacity:1 ,stagger:0.05, delay:.5,duration:2});
 
-    homeLoad()
 }
-
-window.onload = introPlay()
+function loader(){
+    document.querySelector('.lds-facebook').style.display='inline-block'
+}
+window.onload = function() {
+    loader();
+  
+    setTimeout(function() {
+      introPlay();
+      setTimeout(function() {
+        homeLoad();
+      }, 5000); 
+    }, 1000); 
+  };
 
 let playBtn = document.querySelector('#play-reel')
 let homePage = document.querySelector('#home')
@@ -71,6 +83,7 @@ function homeLoad(){
     document.querySelector('#intro-box').style.display='none'
     gsap.fromTo("#myVideo", { opacity: 0 }, { opacity: 1, duration: 1, delay: 1 });
     gsap.fromTo("#menu-btn", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
+    gsap.fromTo("#menu-btn-ic", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
     gsap.fromTo("#logo-img", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, delay: 1.5 });
     l1.play(0);
 }
