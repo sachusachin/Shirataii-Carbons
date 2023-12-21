@@ -80,14 +80,14 @@ function animateMenus() {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".top_heading", {
-  y: 120,
+  y: 50,
   stragger:.2,
   opacity:0,
   duration: 1,
   scrollTrigger: { 
-    trigger: ".top_heading p",
-    start: "top 47%",
-    end: "top 46%",
+    trigger: ".top_heading",
+    start: "top 100%",
+    end: "top 100%",
     scrub:2,
     markers:true
  },
@@ -100,8 +100,8 @@ gsap.from(".main_text", {
     duration: 1,
     scrollTrigger: { 
       trigger: ".main_text p",
-      start: "top 47%",
-      end: "top 46%",
+      start: "top 100%",
+      end: "top 100%",
       scrub:2,
       markers:true
    },
