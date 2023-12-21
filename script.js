@@ -19,6 +19,8 @@ function homeLoad(){
     gsap.fromTo("#menu-btn", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1 });
     gsap.fromTo("#menu-btn-ic", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, delay: 1});
     gsap.fromTo("#logo-img", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, delay: 1 });
+    gsap.fromTo("#mobImg", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1, delay: 1 });
+    gsap.fromTo(".play_reel_left_video_option", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, delay: 1 });
     gsap.fromTo("#myVideo", { opacity: 0 }, { opacity: 1, duration: 1, delay: 2 });
 }
 
@@ -75,6 +77,32 @@ function animateMenus() {
 }
 
 
+gsap.registerPlugin(ScrollTrigger);
 
+gsap.from(".top_heading", {
+  y: 120,
+  stragger:.2,
+  opacity:0,
+  duration: 1,
+  scrollTrigger: { 
+    trigger: ".top_heading p",
+    start: "top 47%",
+    end: "top 46%",
+    scrub:2,
+    markers:true
+ },
+});
 
-
+gsap.from(".main_text", {
+    y: 120,
+    stragger:.2,
+    opacity:0,
+    duration: 1,
+    scrollTrigger: { 
+      trigger: ".main_text p",
+      start: "top 47%",
+      end: "top 46%",
+      scrub:2,
+      markers:true
+   },
+  });
