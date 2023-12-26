@@ -386,14 +386,12 @@ nav .menus{
 .main_text{
     width: 100%;
     height: 100%;
-    min-height: 50vh;
     padding:3% 0;
     font-size: 3.5em;
     text-indent: 2%;
     opacity: 1;
     font-weight: 500;
 }
-
 
 
 
@@ -430,6 +428,121 @@ nav .menus{
     font-weight: 700;
     cursor: pointer;
 }
+.service_main{
+    padding: 3%;
+}
+.service_main_top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.service_main_top #join-btn{
+    font-size: 1em;
+    font-weight: 400;
+    cursor:pointer;
+}
+.service_main_top #join-btn:hover{
+    color: #ff5f38;
+}
+.service_scroller{
+    max-width: 90rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  .text {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    text-rendering: optimizeLegibility;
+  }
+  .text-title {
+    font-size: 1.25rem;
+    color: var(--bg);
+  }
+  
+  .paragraph {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: inherit;
+    margin: 0.25rem 0;
+    color: #252a32;
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .service_main .servive_scroller_main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    cursor: default;
+    overflow: scroll hidden;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    scroll-padding: 0px 1.25rem;
+    scrollbar-width: none;
+  }
+  .service_main .servive_scroller_main::-webkit-scrollbar {
+    display: none;
+  }
+  .service_main .servive_scroller_main.active {
+    cursor: grab;
+    cursor: -webkit-grab;
+  }
+  .service_main .servive_scroller_main .card {
+    width: 16rem;
+    height: auto;
+    flex: 0 0 auto;
+    margin: 0 0.75rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #252a32;
+    background: #ffffff;
+    box-shadow: 10px 8px 13px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  .service_main .servive_scroller_main .card-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 110%;
+  }
+  .service_main .servive_scroller_main .card-image img.responsive {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .service_main .servive_scroller_main .card-inner {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
 @media only screen and (min-width: 541px) and (max-width: 1000px){
     #title-text{
         position: absolute;
@@ -551,6 +664,9 @@ nav .menus{
         color:white;
         cursor: pointer;
     }
+    .service_top_heading_small{
+        margin-bottom: 10px;
+    }
     .top_heading{
         font-size: 1em;
         padding: 5% 0;
@@ -561,5 +677,11 @@ nav .menus{
     }
     .service_top_heading_main{
         font-size: 2em;
+    }
+    .service_main_top{
+        font-size: .7em;
+    }
+    .service_main_top #join-btn{
+        font-size: .7em;
     }
  }
