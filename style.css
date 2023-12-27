@@ -410,7 +410,7 @@ nav .menus{
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 40vh;
+    min-height: 55vh;
 }
 .service_top_heading_small{
     font-size: 1em;
@@ -427,6 +427,11 @@ nav .menus{
     font-size: 3em;  
     font-weight: 700;
     cursor: pointer;
+    text-decoration: underline;
+}
+.service_top_heading_main:hover{
+    transition: 2s ease-in-out;
+    transform-origin: center;
 }
 .service_main{
     padding: 3%;
@@ -565,8 +570,10 @@ nav .menus{
     position: absolute;
     background-color:black;
     color: #fff;
+    left:0;
+    top:0;
     z-index: 1;
-    transform:scale(0);
+    transform:translate(-50%,-50%) scale(0);
     pointer-events: none;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1788);
 }
@@ -589,8 +596,14 @@ nav .menus{
     background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
     padding: 3%;
 }
-
-
+#enquiry-btn{
+    font-size: 1em;
+    font-weight: 400;
+    cursor:pointer;
+}
+#enquiry-btn:hover{
+    color: #ff5f38;
+}
 
 
 @media only screen and (min-width: 541px) and (max-width: 1000px){
@@ -718,7 +731,7 @@ nav .menus{
         margin-bottom: 10px;
     }
     .top_heading{
-        font-size: 1em;
+        font-size: .7em;
         padding: 5% 0;
     }
     .main_text{
@@ -729,7 +742,7 @@ nav .menus{
         font-size: 2em;
     }
     .service_main_top{
-        font-size: 1em;
+        font-size: .7em;
     }
     .service_main_top #join-btn{
         font-size: 1.2em;

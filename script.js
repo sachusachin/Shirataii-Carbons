@@ -80,12 +80,12 @@ function animateMenus() {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".page-2 .top_heading", {
-  y: 50,
+  y: -50,
   stragger:.2,
   opacity:0,
   duration: 1,
   scrollTrigger: { 
-    trigger: ".top_heading",
+    trigger: ".main_text",
     start: "top 100%",
     end: "top 100%",
     scrub:2,
@@ -142,14 +142,41 @@ scroll.addEventListener("mousemove", (e) => {
 });
 
 
+gsap.from(".page-3 .service_top_heading_small", {
+    y: -50,
+    stragger:.2,
+    opacity:0,
+    duration: 3,
+    scrollTrigger: { 
+      trigger: ".page-3 .service_main_top",
+      start: "top 100%",
+      end: "top 100%",
+      scrub:2,
+   },
+  });
+  
+  gsap.from(".page-3 .service_top_heading_main", {
+      y: 120,
+      stragger:.5,
+      opacity:0,
+      duration: 3,
+      scrollTrigger: { 
+        trigger: ".page-3 .service_main_top",
+        start: "top 100%",
+        end: "top 100%",
+        scrub:2,
+     },
+});
+
+
 
 gsap.from(".page-4 .top_heading", {
-    y: 50,
+    y: -50,
     stragger:.2,
     opacity:0,
     duration: 1,
     scrollTrigger: { 
-      trigger: ".page-4 .top_heading",
+      trigger: ".page-4 .main_text",
       start: "top 100%",
       end: "top 100%",
       scrub:2,
@@ -162,7 +189,7 @@ gsap.from(".page-4 .top_heading", {
       opacity:0,
       duration: 3,
       scrollTrigger: { 
-        trigger: ".page-4 .main_text p",
+        trigger: ".page-4 .main_text",
         start: "top 100%",
         end: "top 100%",
         scrub:2,
@@ -171,7 +198,7 @@ gsap.from(".page-4 .top_heading", {
 
 
 gsap.from(".page-5 .top_heading", {
-    y: 50,
+    y: -50,
     stragger:.2,
     opacity:0,
     duration: 1,
@@ -204,10 +231,8 @@ visionPage.addEventListener('mouseenter',()=>{
     gsap.fromTo("#join-btn-r", { scale: 0 } , { scale: 1, duration: 1 });
 })
 visionPage.addEventListener('mousemove',(e)=>{
-    
-    const mouseY = e.clientY;
-    const mouseX = e.clientX;
-    gsap.to("#join-btn-r", { transform:`translate3d(${mouseX}px, ${mouseY}px, 0)`, duration: 1 });
+    // gsap.to("#join-btn-r", {left:e.clientX, top:e.clientY, duration: 1 });
+    gsap.to("#join-btn-r", {left:e.pageX, top:e.pageY, duration: 1 });
 })
 visionPage.addEventListener('mouseleave',(e)=>{
     gsap.fromTo("#join-btn-r", { scale: 1 } ,{ scale: 0, duration: 1 });
