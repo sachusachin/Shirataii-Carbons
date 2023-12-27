@@ -79,7 +79,7 @@ function animateMenus() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".top_heading", {
+gsap.from(".page-2 .top_heading", {
   y: 50,
   stragger:.2,
   opacity:0,
@@ -89,11 +89,10 @@ gsap.from(".top_heading", {
     start: "top 100%",
     end: "top 100%",
     scrub:2,
-    markers:true
  },
 });
 
-gsap.from(".main_text", {
+gsap.from(".page-2 .main_text", {
     y: 120,
     stragger:.2,
     opacity:0,
@@ -103,12 +102,11 @@ gsap.from(".main_text", {
       start: "top 100%",
       end: "top 100%",
       scrub:2,
-      markers:true
    },
   });
 
 
-  const scroll = document.querySelector(".servive_scroller_main");
+const scroll = document.querySelector(".servive_scroller_main");
 var isDown = false;
 var scrollX;
 var scrollLeft;
@@ -142,3 +140,75 @@ scroll.addEventListener("mousemove", (e) => {
 	var scrolling = (element - scrollX) * 2;
 	scroll.scrollLeft = scrollLeft - scrolling;
 });
+
+
+
+gsap.from(".page-4 .top_heading", {
+    y: 50,
+    stragger:.2,
+    opacity:0,
+    duration: 1,
+    scrollTrigger: { 
+      trigger: ".page-4 .top_heading",
+      start: "top 100%",
+      end: "top 100%",
+      scrub:2,
+   },
+  });
+  
+  gsap.from(".page-4 .main_text", {
+      y: 120,
+      stragger:.5,
+      opacity:0,
+      duration: 3,
+      scrollTrigger: { 
+        trigger: ".page-4 .main_text p",
+        start: "top 100%",
+        end: "top 100%",
+        scrub:2,
+     },
+});
+
+
+gsap.from(".page-5 .top_heading", {
+    y: 50,
+    stragger:.2,
+    opacity:0,
+    duration: 1,
+    scrollTrigger: { 
+      trigger: ".page-5 .top_heading",
+      start: "top 100%",
+      end: "top 100%",
+      scrub:2,
+   },
+});
+  
+  gsap.from(".page-5 .main_text", {
+      y: 120,
+      stragger:.5,
+      opacity:0,
+      duration: 3,
+      scrollTrigger: { 
+        trigger: ".page-5 .main_text p",
+        start: "top 100%",
+        end: "top 100%",
+        scrub:2,
+     },
+});
+
+
+
+let visionPage = document.querySelector('.joinball_box')
+
+visionPage.addEventListener('mouseenter',()=>{
+    gsap.fromTo("#join-btn-r", { scale: 0 } , { scale: 1, duration: 1 });
+})
+visionPage.addEventListener('mousemove',(e)=>{
+    
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    gsap.to("#join-btn-r", { transform:`translate3d(${mouseX}px, ${mouseY}px, 0)`, duration: 1 });
+})
+visionPage.addEventListener('mouseleave',(e)=>{
+    gsap.fromTo("#join-btn-r", { scale: 1 } ,{ scale: 0, duration: 1 });
+})

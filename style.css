@@ -451,20 +451,20 @@ nav .menus{
     max-width: 90rem;
     width: 100%;
     height: auto;
-  }
-  
-  .text {
+}
+
+.text {
     font-family: inherit;
     font-weight: 700;
     line-height: inherit;
     text-rendering: optimizeLegibility;
-  }
-  .text-title {
+}
+.text-title {
     font-size: 1.25rem;
     color: var(--bg);
-  }
-  
-  .paragraph {
+}
+
+.paragraph {
     font-family: inherit;
     font-size: 1rem;
     font-weight: normal;
@@ -473,9 +473,9 @@ nav .menus{
     color: #252a32;
     text-transform: unset;
     text-rendering: optimizeLegibility;
-  }
-  
-  .truncate {
+}
+
+.truncate {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -483,9 +483,9 @@ nav .menus{
     height: auto;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  .service_main .servive_scroller_main {
+}
+
+.service_main .servive_scroller_main {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -499,15 +499,15 @@ nav .menus{
         scroll-snap-type: x mandatory;
     scroll-padding: 0px 1.25rem;
     scrollbar-width: none;
-  }
-  .service_main .servive_scroller_main::-webkit-scrollbar {
+}
+.service_main .servive_scroller_main::-webkit-scrollbar {
     display: none;
-  }
-  .service_main .servive_scroller_main.active {
+}
+.service_main .servive_scroller_main.active {
     cursor: grab;
     cursor: -webkit-grab;
-  }
-  .service_main .servive_scroller_main .card {
+}
+.service_main .servive_scroller_main .card {
     width: 16rem;
     height: auto;
     flex: 0 0 auto;
@@ -518,16 +518,16 @@ nav .menus{
     color: #252a32;
     background: #ffffff;
     box-shadow: 10px 8px 13px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
-  .service_main .servive_scroller_main .card-image {
+}
+.service_main .servive_scroller_main .card-image {
     position: relative;
     display: block;
     width: 100%;
     height: auto;
     border-radius: 10px;
     padding-top: 110%;
-  }
-  .service_main .servive_scroller_main .card-image img.responsive {
+}
+.service_main .servive_scroller_main .card-image img.responsive {
     position: absolute;
     display: block;
     top: 0;
@@ -537,12 +537,62 @@ nav .menus{
     -o-object-fit: cover;
     border-radius: 10px;
     object-fit: cover;
-  }
-  .service_main .servive_scroller_main .card-inner {
+}
+.service_main .servive_scroller_main .card-inner {
     width: 100%;
     height: auto;
     padding: 1rem;
-  }
+}
+.page-4{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+    padding: 3%;
+}
+
+.joinball_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#join-btn-r{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color:black;
+    color: #fff;
+    z-index: 1;
+    transform:scale(0);
+    pointer-events: none;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1788);
+}
+.joinball_box video{
+    width: 90%;
+}
+.joinball_text{
+    position: absolute;
+    text-align: center;
+    max-width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3vh;
+}
+.page-5{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+    padding: 3%;
+}
+
+
+
+
 @media only screen and (min-width: 541px) and (max-width: 1000px){
     #title-text{
         position: absolute;
@@ -679,9 +729,12 @@ nav .menus{
         font-size: 2em;
     }
     .service_main_top{
-        font-size: .7em;
+        font-size: 1em;
     }
     .service_main_top #join-btn{
-        font-size: .7em;
+        font-size: 1.2em;
+    }
+    .joinball_text{
+        font-size: 2vh;
     }
  }
