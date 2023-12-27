@@ -203,7 +203,7 @@ gsap.from(".page-5 .top_heading", {
     opacity:0,
     duration: 1,
     scrollTrigger: { 
-      trigger: ".page-5 .top_heading",
+      trigger: ".page-5 .main_text",
       start: "top 100%",
       end: "top 100%",
       scrub:2,
