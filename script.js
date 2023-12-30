@@ -237,3 +237,17 @@ visionPage.addEventListener('mousemove',(e)=>{
 visionPage.addEventListener('mouseleave',(e)=>{
     gsap.fromTo("#join-btn-r", { scale: 1 } ,{ scale: 0, duration: 1 });
 })
+
+
+function openSidePanel(){
+  gsap.fromTo("#sidepanel", { width: 0, opacity:0, visibility:'hidden' }, { width: '100vw', opacity:1, visibility:'visible', duration: 1 });
+  gsap.fromTo(".sidepanel_top .logo", { scale: 0 }, { scale:1, duration: .5, delay:1});
+  gsap.fromTo("#closeSide-btn", { scale: 0 }, { scale:1, duration: .5, delay:1 });
+  // gsap.fromTo(".contact_form_container", { scale: 0, visibility:'hidden' }, { scale:1, visibility:'visible', duration: 1, delay:1 });
+}
+function closeSidePanel(){
+  gsap.fromTo(".sidepanel_top .logo", { scale: 1 }, { scale:0, duration: .5});
+  gsap.fromTo("#closeSide-btn", { scale: 1}, { scale:0, duration: .5 });
+  // gsap.fromTo(".contact_form_container", { scale: 1 , visibility:'visible'}, { scale:0, visibility:'hidden' , duration: .5 });
+  gsap.fromTo("#sidepanel", { width: '100vw' , opacity:1 , visibility:'visible'}, { width: '0', opacity:0, visibility:'hidden' ,duration: .5 ,delay:.5});
+}

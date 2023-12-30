@@ -135,6 +135,43 @@ a,button{
     transition: .5s ease-in-out;
     opacity: 0;
 }
+
+#sidepanel{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vh;
+    height: 100vh;
+    background-color: black;
+    z-index:999;
+    padding:3%;
+    opacity:0;
+    overflow-y: auto;
+    visibility:hidden
+}
+.sidepanel_top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidepanel_top .logo{
+    width: 180px;
+    height: 60px;
+    /* scale: 0; */
+}
+.sidepanel_top .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#closeSide-btn{
+    font-size: 2rem;
+    color:white;
+    cursor: pointer;
+    /* scale: 0; */
+}
+
 .page-1{
     height: 100vh;
     position: relative;
