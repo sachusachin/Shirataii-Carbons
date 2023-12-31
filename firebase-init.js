@@ -29,7 +29,7 @@ const firebaseConfig = {
 
     dataArray.forEach(function (data,i) {
       const newRow = document.createElement("tr");
-      newRow.innerHTML = `<td>${i+1}</td><td>${data.name}</td><td>${data.email}</td><td>${data.message}</td><td>${data.date}</td><td class='delete-btn' data-id="${data.id}">Delete</td>`;
+      newRow.innerHTML = `<td>${i+1}</td><td>${data.name}</td><td>${data.email}</td><td>${data.message}</td><td>${data.date}</td><td class='delete-btn' data-id="${data.id}" style="display:none;">Delete</td>`;
       tableBody.appendChild(newRow);
     });
   }
