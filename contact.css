@@ -55,7 +55,7 @@ th {
   float:left;
 }
 .tb_search{
-  width: 20%;
+  width: 40%;
   float:right;
 }
 .pagination-container {
@@ -64,7 +64,7 @@ th {
 }
 
 .rows_count {
-  width: 20%;
+  /* width: 20%; */
   float:right;
   text-align:right;
   color: #999;
@@ -79,4 +79,15 @@ th {
 }
 .delete-btn:hover{
   opacity: .8;
+}
+
+.container {
+  /* padding-right: 15px; */
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x: auto;
+}
+.form-control {
+  width: unset !important;
 }
