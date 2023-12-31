@@ -78,12 +78,19 @@ function formatDateToCustomFormat(date) {
       updateTable();
 
       // Display success message
-      alert("Data added successfully!");
+      Swal.fire({
+        title: "Good job!",
+        text: "Thanks for your Intrest",
+        icon: "success"
+      });
+      document.getElementById("name").value='';
+      document.getElementById("email").value='';
+      document.getElementById("message").value='';
     } catch (error) {
       console.error("Error adding data:", error);
 
       // Display error message
-      alert("Error adding data. Please try again.");
+      alert("Please try again.");
     }
   }
 
