@@ -251,3 +251,66 @@ function closeSidePanel(){
   // gsap.fromTo(".contact_form_container", { scale: 1 , visibility:'visible'}, { scale:0, visibility:'hidden' , duration: .5 });
   gsap.fromTo("#sidepanel", { width: '100vw' , opacity:1 , visibility:'visible'}, { width: '0', opacity:0, visibility:'hidden' ,duration: .5 ,delay:.5});
 }
+
+
+// import {collection, addDoc, getDocs} from 'firebase-onanimationiteration.js'
+
+
+// var dataArray = [];
+
+// async function fetchDataFromFirestore() {
+//   const querySnapshot = await getDocs(collection(db, "user-messages"));
+//   querySnapshot.forEach((doc) => {
+//     dataArray.push(doc.data());
+//   });
+// }
+
+// // Call this function on page load to fetch data from Firestore
+// fetchDataFromFirestore();
+
+// document.querySelector('#contact-form').addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   addData()
+// });
+
+// function removeData(){
+//   document.getElementById("name").value='';
+//   document.getElementById("email").value='';
+//   document.getElementById("message").value='';
+// }
+
+
+// // Function to update the table based on the data array
+// async function addData() {
+//   const name = document.getElementById("name").value;
+//   const email = document.getElementById("email").value;
+//   const message = document.getElementById("message").value;
+//   const date = Date.now();
+
+//   // Validation can be added here
+
+//   const newData = {
+//     id: Date.now().toString(), // Using timestamp as a unique ID
+//     name: name,
+//     email: email,
+//     message: message,
+//     date: date
+//   };
+
+//   try {
+//     // Add data to Firestore
+//     await addDoc(collection(db, "user-messages"), newData);
+
+//     dataArray.push(newData);
+//     updateTable();
+
+//     // Display success message
+//     alert("Data added successfully!");
+//     removeData()
+//   } catch (error) {
+//     console.error("Error adding data:", error);
+
+//     // Display error message
+//     alert("Error adding data. Please try again.");
+//   }
+// }
