@@ -148,7 +148,7 @@ gsap.from(".page-3 .service_top_heading_small", {
     opacity:0,
     duration: 3,
     scrollTrigger: { 
-      trigger: ".page-3 .service_main_top",
+      trigger: ".page-3 .service_top_heading_small",
       start: "top 100%",
       end: "top 100%",
       scrub:2,
@@ -161,7 +161,7 @@ gsap.from(".page-3 .service_top_heading_small", {
       opacity:0,
       duration: 3,
       scrollTrigger: { 
-        trigger: ".page-3 .service_main_top",
+        trigger: ".page-3 .service_top_heading_small",
         start: "top 100%",
         end: "top 100%",
         scrub:2,
