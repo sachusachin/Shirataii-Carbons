@@ -493,7 +493,7 @@ nav .menus{
 }
 .service_main_top #join-btn{
     font-size: 1em;
-    font-weight: 400;
+    /* font-weight: 400; */
     cursor:pointer;
 }
 .service_main_top #join-btn:hover{
@@ -645,7 +645,7 @@ nav .menus{
 }
 #enquiry-btn{
     font-size: 1em;
-    font-weight: 400;
+    /* font-weight: 400; */
     cursor:pointer;
 }
 #enquiry-btn:hover{
@@ -1420,4 +1420,18 @@ nav .menus{
       height: auto;
     }
     
+  }
+
+  .joinbtns{
+    color: #ff5f38;
+    font-weight: 800;
+    animation: btn .5s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes btn {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: .96;
+    }
   }
